@@ -8,12 +8,13 @@
     },
     "browser_action": {
         "default_icon": "artgrid.png",
-        "default_title": "Take a screen shot" 
+        "default_title": "Visual Productivity Screenshot" 
     },
     "icons": {
     },
     "permissions": [
-        "activeTab"
+        "activeTab",
+        "storage"
     ],
     "manifest_version": 2
 }
