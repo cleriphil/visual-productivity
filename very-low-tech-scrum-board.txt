@@ -1,19 +1,21 @@
 Very Low-Tech "Scrum" Board
 
+-----------------
 To Do:
 
-Code| use Chrome tabs API and CaptureVisibleTab method to capture browser
-Code| Store screenshot in local storage
 
-
+-----------------
 In Progress: 
 
-Code| set up Manifest and other chrome ext. files
-
-
+• Code/Research| Store screenshot in local storage
+    Output: 
+        - "Get the image file of chrome.tabs.captureVisibleTab" https://stackoverflow.com/questions/15610417/get-the-image-file-of-chrome-tabs-capturevisibletab
+        - https://stackoverflow.com/questions/10036871/how-can-i-save-a-tab-thumbnail-to-local-storage/10040929#10040929
+    
+-----------------
 Done:
 
-Research| Chrome Extension, Storage/database?, Screenshot functionality
+• Research| Chrome Extension, Storage/database?, Screenshot functionality
     Output: 
         JS libraries: https://openbase.io/categories/js/best-javascript-screen-capture-libraries?orderBy=RECOMMENDED&
 
@@ -24,18 +26,22 @@ Research| Chrome Extension, Storage/database?, Screenshot functionality
 
         JS image maniupulation libaries: https://blog.bitsrc.io/image-manipulation-libraries-for-javascript-187fde1ad5af
 
+• Code| set up Manifest and other chrome ext. files
 
+• Code| use Chrome tabs API and CaptureVisibleTab method to capture browser
+
+-----------------
 Backlog:
 
-Code| Capture screenshot after 5 minutes
-Research| cookies
+• Code| Capture screenshot after 5 minutes
+• Research| cookies
 
-Research| js collage libraries
-Code| collage screenshot images together
+• Research| js collage libraries
+• Code| collage screenshot images together
 
-Code/Research| Use a js library to manipulate image
+• Code/Research| Use a js library to manipulate image
 
-Code| Block specific sites
-Code| allow user to specify which sites to Block
+• Code| Block specific sites
+• Code| allow user to specify which sites to Block
 
-Code| release chrome extension w/account
+• Code| release chrome extension w/account
