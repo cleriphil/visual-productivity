@@ -1,6 +1,8 @@
 let id = 100;
+let imageUrl = "";
 chrome.browserAction.onClicked.addListener(() => {
     chrome.tabs.captureVisibleTab((screenshotUrl) => {
+        imageUrl = screenshotUrl;
         const viewTabUrl = chrome.extension.getURL('screenshot.html?id=' + id++)
         let targetId = null;
         chrome.tabs.onUpdated.addListener(function listener(tabId, changedProps) {
@@ -19,17 +21,10 @@ chrome.browserAction.onClicked.addListener(() => {
         chrome.tabs.create({url: viewTabUrl}, (tab) => {
         targetId = tab.id;
         });
-
-        //storage sync code
-        chrome.storage.sync.set({ 'target' : viewTabUrl}, function() {
-            if (chrome.runtime.error) {
-            console.log('Runtime error.');
-            }
-        });
-        chrome.storage.sync.get('target', function(result) {
-            if (!chrome.runtime.error) {
-            console.log('result.target is ' + result.target);
-            }
+        chrome.storage.local.set({ 'target' : imageUrl}, function() {
+            if (chrome.runtime.lastError) {
+                console.log('Runtime error');
+            } 
         });
     });
 });

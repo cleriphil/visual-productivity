@@ -11,7 +11,7 @@ In Progress:
 
 • Code/Research| Refactor Chrome.storage.sync code 
     - save multiple screenshots
-    - save the correct screenshot URL
+    - save the correct screenshot URL - done
     Output: 
         - multiple object storage https://stackoverflow.com/questions/41792988/how-to-save-multiple-object-in-storage-in-chrome-extentions
 
