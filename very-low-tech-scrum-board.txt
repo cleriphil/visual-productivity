@@ -3,19 +3,19 @@ Very Low-Tech "Scrum" Board
 -----------------
 To Do:
 
-• Code| Refactor Chrome.storage.sync code 
-    - save multiple screenshots
-    - save the correct screenshot URL
+• Code| Resize/compress images
 
 -----------------
 In Progress: 
 
-• Code/Research| Store screenshot in local storage
+
+• Code/Research| Refactor Chrome.storage.sync code 
+    - save multiple screenshots
+    - save the correct screenshot URL
     Output: 
-        - "Get the image file of chrome.tabs.captureVisibleTab" https://stackoverflow.com/questions/15610417/get-the-image-file-of-chrome-tabs-capturevisibletab , https://stackoverflow.com/questions/10036871/how-can-i-save-a-tab-thumbnail-to-local-storage/10040929#10040929  (ehh, old stackoverflow questions, may not be relevant)
-        - Chrome Storage API https://developer.chrome.com/docs/extensions/reference/storage/
-            - https://stackoverflow.com/questions/14531102/saving-and-retrieving-from-chrome-storage-sync
-            - example: https://gist.github.com/IzumiSy/765cfd6dc02c79de875e
+        - multiple object storage https://stackoverflow.com/questions/41792988/how-to-save-multiple-object-in-storage-in-chrome-extentions
+
+
 -----------------
 Done:
 
@@ -36,6 +36,13 @@ Done:
 
 • Code| use Chrome tabs API and CaptureVisibleTab method to capture browser
 
+• Code/Research| Store screenshot in local storage
+    Output: 
+        - "Get the image file of chrome.tabs.captureVisibleTab" https://stackoverflow.com/questions/15610417/get-the-image-file-of-chrome-tabs-capturevisibletab , https://stackoverflow.com/questions/10036871/how-can-i-save-a-tab-thumbnail-to-local-storage/10040929#10040929  (ehh, old stackoverflow questions, may not be relevant)
+        - Chrome Storage API https://developer.chrome.com/docs/extensions/reference/storage/
+            - https://stackoverflow.com/questions/14531102/saving-and-retrieving-from-chrome-storage-sync
+            - example: https://gist.github.com/IzumiSy/765cfd6dc02c79de875e
+
 -----------------
 Backlog:
 
@@ -43,11 +50,14 @@ Backlog:
 • Research| cookies
 
 • Research| js collage libraries
+    Output: 
+        - overlay code https://www.tutorialspoint.com/combining-multiple-images-into-a-single-one-using-javascript
+
 • Code| collage screenshot images together
 
 • Code/Research| Use a js library to manipulate image
 
 • Code| Block specific sites
-• Code| allow user to specify which sites to Block
+• Code| allow user to specify which sites to block
 
 • Code| release chrome extension w/account
