@@ -3,17 +3,8 @@ Very Low-Tech "Scrum" Board
 -----------------
 To Do:
 
-• Code| Resize/compress images
-
 -----------------
 In Progress: 
-
-
-• Code/Research| Refactor Chrome.storage.sync code 
-    - save multiple screenshots
-    - save the correct screenshot URL - done
-    Output: 
-        - multiple object storage https://stackoverflow.com/questions/41792988/how-to-save-multiple-object-in-storage-in-chrome-extentions
 
 
 -----------------
@@ -43,8 +34,18 @@ Done:
             - https://stackoverflow.com/questions/14531102/saving-and-retrieving-from-chrome-storage-sync
             - example: https://gist.github.com/IzumiSy/765cfd6dc02c79de875e
 
+• Code/Research| Refactor Chrome.storage.sync code 
+    - save multiple screenshots
+    - save the correct screenshot URL - done
+    Output: 
+        - multiple object storage 
+            - https://stackoverflow.com/questions/41792988/how-to-save-multiple-object-in-storage-in-chrome-extentions
+            - https://stackoverflow.com/questions/23270282/how-to-push-multiple-values-to-a-chrome-storage-local-array-key
+
 -----------------
 Backlog:
+
+• Code| Resize/compress images
 
 • Code| Capture screenshot after 5 minutes
 • Research| cookies

@@ -21,11 +21,14 @@ chrome.browserAction.onClicked.addListener(() => {
         chrome.tabs.create({url: viewTabUrl}, (tab) => {
         targetId = tab.id;
         });
-        chrome.storage.local.set({ 'target' : imageUrl}, function() {
-            if (chrome.runtime.lastError) {
-                console.log('Runtime error');
-            } 
-        });
+        chrome.storage.local.get((result) => {
+            if(typeof(result['target']) !== 'undefined' && result['target'] instanceof Array) { 
+              result['target'].push(imageUrl);
+            } else {
+              result['target'] = [imageUrl];
+            }
+            chrome.storage.local.set(result); 
+          });   
     });
 });
 
