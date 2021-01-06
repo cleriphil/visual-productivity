@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Document</title>
+<title>Artwork</title>
 <style>
    body {
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -17,30 +17,22 @@
 <img class="image" src="C:/test-images/test3.jpg" width="500"/>
 <img class="image" src="C:/test-images/test4.jpg" width="500"/>
 <img class="image" src="C:/test-images/test5.jpg" width="500"/>
-<canvas class="result"></canvas>
+<canvas class="artwork" width="500" height="500"></canvas>
 <br />
 <button class="Btn">CLICK HERE</button>
 <h3>Click on the above button to combine the two images above together</h3>
 <script>
-   let imgEle1 = document.querySelectorAll(".image")[0];
-   let imgEle2 = document.querySelectorAll(".image")[1];
-   let imgEle3 = document.querySelectorAll(".image")[2];
-   let imgEle4 = document.querySelectorAll(".image")[3];
-   let imgEle5 = document.querySelectorAll(".image")[4];
-   let resEle = document.querySelector(".result");
-   var context = resEle.getContext("2d");
-   let BtnEle = document.querySelector(".Btn");
-   BtnEle.addEventListener("click", () => {
-   resEle.width = imgEle1.width;
-      resEle.height = imgEle1.height;
-      context.globalAlpha = 1.0;
-      context.drawImage(imgEle1, -200, -200);
-      context.globalAlpha = 0.5;
-      context.drawImage(imgEle2, -200, -200);
-      context.drawImage(imgEle3, -200, -200);
-      context.drawImage(imgEle4, -200, -200);
-      context.drawImage(imgEle5, -200, -200);
-   });
+    let artwork = document.querySelector(".artwork");
+    var context = artwork.getContext("2d");
+    let BtnEle = document.querySelector(".Btn");
+
+    BtnEle.addEventListener("click", () => {
+        context.globalAlpha = 0.5;
+        for (let x = 0; x < document.querySelectorAll(".image").length; x++) {
+            context.drawImage(document.querySelectorAll(".image")[x], -1000, -200);
+        }
+    });
+
 </script>
 </body>
 </html>

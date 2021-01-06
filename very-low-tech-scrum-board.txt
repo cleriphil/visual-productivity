@@ -55,9 +55,7 @@ Done:
 -----------------
 Backlog:
 
-
-
-• Code| Capture screenshot after 5 minutes
+• Code| Capture screenshot after 5 minutes/automatically
 • Research| cookies
 
 • Research| js collage libraries
@@ -67,6 +65,7 @@ Backlog:
 • Code| collage screenshot images together
 
 • Code/Research| Use a js library to manipulate image
+    - use canvas to rotate images?
 
 • Code| Block specific sites
 • Code| allow user to specify which sites to block
