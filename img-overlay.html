@@ -6,13 +6,18 @@
     <title>Artwork</title>
 </head>
 <body>
-    <canvas class="artwork" width="500" height="500"></canvas>
-    
+    <canvas class="tile1" width="500" height="500"></canvas>
+    <canvas class="tile2" width="500" height="500"></canvas>
+
     <script>  
-        let imgs = ["C:/test-images/test1.jpg","C:/test-images/test2.jpg","C:/test-images/test3.jpg","C:/test-images/test4.jpg","C:/test-images/test5.jpg"]       
-        let artwork = document.querySelector(".artwork");
-        let context = artwork.getContext("2d");
-        context.globalAlpha = 0.5;
+        let imgs = ["C:/test-images/test1.jpg","C:/test-images/test2.jpg","C:/test-images/test3.jpg","C:/test-images/test4.jpg","C:/test-images/test5.jpg","C:/test-images/test6.jpg","C:/test-images/test7.jpg","C:/test-images/test8.jpg"]       
+        let tile1 = document.querySelector(".tile1");
+        let tile2 = document.querySelector(".tile2");
+        let context1 = tile1.getContext("2d");
+        let context2 = tile2.getContext("2d");
+
+        context1.globalAlpha = 0.2;
+        context2.globalAlpha = 0.2;
 
         var imgElements = []
         for (let i = 0; i < imgs.length; i++) {
@@ -22,8 +27,12 @@
         }
 
         addEventListener("load",() => {         
-            for (const img of imgElements) {
-                context.drawImage(img, -1000, -500);
+            for (let i = 0; i < imgs.length; i++) {
+                if (i<3){
+                    context1.drawImage(imgElements[i], -1000, -500);
+                } else {
+                    context2.drawImage(imgElements[i], -1000, -500);
+                }
             }
         });
     </script>
